@@ -79,6 +79,7 @@
     <Content Include="Default.aspx" />
     <Content Include="GridView.aspx" />
     <Content Include="images\nature.jpg" />
+    <Content Include="ListBoxExercise.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="PostBack.aspx" />
     <Content Include="QueryString1.aspx" />
@@ -135,6 +136,13 @@
     </Compile>
     <Compile Include="GridView.aspx.designer.cs">
       <DependentUpon>GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListBoxExercise.aspx.cs">
+      <DependentUpon>ListBoxExercise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListBoxExercise.aspx.designer.cs">
+      <DependentUpon>ListBoxExercise.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
