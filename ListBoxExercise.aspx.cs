@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,9 +12,27 @@ namespace ASP_Tutorial
 {
     public partial class ListBoxExercise : System.Web.UI.Page
     {
+        string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                GetData();
+            }
+        }
 
+        protected void GetData()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "Select * from Employee";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            ListBox1.DataSource = dt;
+            ListBox1.DataTextField = "Name";
+            ListBox1.DataValueField = "Id";
+            ListBox1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
