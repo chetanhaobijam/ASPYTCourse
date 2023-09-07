@@ -78,7 +78,12 @@
     <Content Include="DDL.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="GridView.aspx" />
+    <Content Include="images\Chetan_Photo.jpg" />
+    <Content Include="images\Kishan_Photo.jpg" />
     <Content Include="images\nature.jpg" />
+    <Content Include="images\Ramananda_Photo.jpg" />
+    <Content Include="images\Rohel_Photo.jpg" />
+    <Content Include="InsertImages.aspx" />
     <Content Include="ListBoxExercise.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="PostBack.aspx" />
@@ -136,6 +141,13 @@
     </Compile>
     <Compile Include="GridView.aspx.designer.cs">
       <DependentUpon>GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertImages.aspx.cs">
+      <DependentUpon>InsertImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertImages.aspx.designer.cs">
+      <DependentUpon>InsertImages.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListBoxExercise.aspx.cs">
       <DependentUpon>ListBoxExercise.aspx</DependentUpon>
