@@ -71,6 +71,7 @@
     <Content Include="App_Data\LoginDatabase_log.ldf">
       <DependentUpon>LoginDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="AutoIncrement.aspx" />
     <Content Include="BindDDL.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="css\styles.css" />
@@ -100,6 +101,13 @@
     <Content Include="EasyEditDelete.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoIncrement.aspx.cs">
+      <DependentUpon>AutoIncrement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoIncrement.aspx.designer.cs">
+      <DependentUpon>AutoIncrement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BindDDL.aspx.cs">
       <DependentUpon>BindDDL.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
