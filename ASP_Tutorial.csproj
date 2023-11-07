@@ -92,6 +92,8 @@
     <Content Include="QueryString2.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Repeater.aspx" />
+    <Content Include="SendData1.aspx" />
+    <Content Include="SendData2.aspx" />
     <Content Include="SessionStateForm3.aspx" />
     <Content Include="validation.aspx" />
     <Content Include="ViewState.aspx" />
@@ -213,6 +215,20 @@
     </Compile>
     <Compile Include="Repeater.aspx.designer.cs">
       <DependentUpon>Repeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendData1.aspx.cs">
+      <DependentUpon>SendData1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendData1.aspx.designer.cs">
+      <DependentUpon>SendData1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendData2.aspx.cs">
+      <DependentUpon>SendData2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendData2.aspx.designer.cs">
+      <DependentUpon>SendData2.aspx</DependentUpon>
     </Compile>
     <Compile Include="SessionStateForm3.aspx.cs">
       <DependentUpon>SessionStateForm3.aspx</DependentUpon>
