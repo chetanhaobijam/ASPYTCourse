@@ -73,11 +73,14 @@
     </Content>
     <Content Include="AutoIncrement.aspx" />
     <Content Include="BindDDL.aspx" />
+    <Content Include="Boostrap_with_ASP.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\styles.css" />
     <Content Include="Dashboard.aspx" />
     <Content Include="DDL.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="FilterGridView.aspx" />
     <Content Include="GridView.aspx" />
     <Content Include="images\Chetan_Photo.jpg" />
     <Content Include="images\Kishan_Photo.jpg" />
@@ -92,6 +95,7 @@
     <Content Include="QueryString2.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Repeater.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="SendData1.aspx" />
     <Content Include="SendData2.aspx" />
     <Content Include="SessionStateForm3.aspx" />
@@ -116,6 +120,13 @@
     </Compile>
     <Compile Include="BindDDL.aspx.designer.cs">
       <DependentUpon>BindDDL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Boostrap_with_ASP.aspx.cs">
+      <DependentUpon>Boostrap_with_ASP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Boostrap_with_ASP.aspx.designer.cs">
+      <DependentUpon>Boostrap_with_ASP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -144,6 +155,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FilterGridView.aspx.cs">
+      <DependentUpon>FilterGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FilterGridView.aspx.designer.cs">
+      <DependentUpon>FilterGridView.aspx</DependentUpon>
     </Compile>
     <Compile Include="GridView.aspx.cs">
       <DependentUpon>GridView.aspx</DependentUpon>
