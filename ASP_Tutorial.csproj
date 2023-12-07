@@ -76,6 +76,7 @@
     <Content Include="Boostrap_with_ASP.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Crud_Image.aspx" />
     <Content Include="css\styles.css" />
     <Content Include="Dashboard.aspx" />
     <Content Include="DDL.aspx" />
@@ -134,6 +135,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Crud_Image.aspx.cs">
+      <DependentUpon>Crud_Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Crud_Image.aspx.designer.cs">
+      <DependentUpon>Crud_Image.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
