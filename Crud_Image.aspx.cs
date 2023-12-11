@@ -17,7 +17,10 @@ namespace ASP_Tutorial
         string cs = ConfigurationManager.ConnectionStrings["aspcoursecs"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                BindGridView();
+            }
         }
 
         protected void Btn_Insert_Click(object sender, EventArgs e)
@@ -28,66 +31,74 @@ namespace ASP_Tutorial
             string extension = Path.GetExtension(fileName);
             HttpPostedFile postedFile = FU_Image.PostedFile;
             int size = postedFile.ContentLength;
-
-            if (FU_Image.HasFile)
+            if (FU_Image.HasFile == true)
             {
-                if (extension.ToLower() == ".jpg" || extension.ToLower() == ".png" || extension.ToLower() == ".jpeg")
+                if (extension.ToLower() == ".jpg" || extension.ToLower() == ".png" || extension.ToLower() == ".png")
                 {
-                    if (size < 1000000)
+                    if (size <= 1000000)
                     {
-                        string query1 = "select * from Employee where Id = @Id";
-                        SqlCommand cmd1 = new SqlCommand(query1, con);
-                        cmd1.Parameters.AddWithValue("@Id", Txt_Id.Text);
+                        string query2 = "select * from Employee where Id = @Id";
+                        SqlCommand cmd2 = new SqlCommand(query2, con);
+                        cmd2.Parameters.AddWithValue("@Id", Txt_Id.Text);
                         con.Open();
-                        SqlDataReader dr = cmd1.ExecuteReader();
-                        if (dr.HasRows)
+                        SqlDataReader dr = cmd2.ExecuteReader();
+                        if (dr.HasRows == true)
                         {
-                            Response.Write("<script>alert('Id already present';)</script>");
+                            Response.Write("<script>alert('ID already exists')</script>");
                             con.Close();
-                        } else
+                        }
+                        else
                         {
                             con.Close();
                             FU_Image.SaveAs(filePath + fileName);
                             string path2 = "images/" + fileName;
-                            string query2 = "Insert into Employee values(@Id, @Name, @Age, @Gender, @Designation, @Salary, @Image)";
-                            SqlCommand cmd2 = new SqlCommand(query2, con);
-                            cmd2.Parameters.AddWithValue("@Id", Txt_Id.Text);
-                            cmd2.Parameters.AddWithValue("@Name", Txt_Name.Text);
-                            cmd2.Parameters.AddWithValue("@Age", Txt_Age.Text);
-                            cmd2.Parameters.AddWithValue("@Gender", Ddl_Gender.SelectedValue);
-                            cmd2.Parameters.AddWithValue("@Designation", Ddl_Designation.SelectedValue);
-                            cmd2.Parameters.AddWithValue("@Salary", Txt_Salary.Text);
-                            cmd2.Parameters.AddWithValue("@Image", path2);
+                            string query = "Insert into Employee values(@Id, @Name, @Age, @Gender, @Designation, @Salary, @Image_Path)";
+                            SqlCommand cmd = new SqlCommand(query, con);
+                            cmd.Parameters.AddWithValue("@Id", Txt_Id.Text);
+                            cmd.Parameters.AddWithValue("@Name", Txt_Name.Text);
+                            cmd.Parameters.AddWithValue("@Age", Txt_Age.Text);
+                            cmd.Parameters.AddWithValue("@Gender", Ddl_Gender.SelectedValue);
+                            cmd.Parameters.AddWithValue("@Designation", Ddl_Designation.SelectedValue);
+                            cmd.Parameters.AddWithValue("@Salary", Txt_Salary.Text);
+                            cmd.Parameters.AddWithValue("@Image_Path", path2);
                             con.Open();
-                            int a = cmd2.ExecuteNonQuery();
-                            if(a > 0)
+                            int a = cmd.ExecuteNonQuery();
+                            if (a > 0)
                             {
-                                Response.Write("<script>alert('Insertion successful!!!')</script>");
+                                Response.Write("<script>alert('Inserted successfully')</script>");
+                                BindGridView();
                                 ClearControls();
-                            } else
+                                Lbl_Image.Visible = false;
+                            }
+                            else
                             {
-                                Response.Write("<script>alert('Insertion failed')</script>");
+                                Response.Write("<script>alert('Inserted failed')</script>");
                             }
                             con.Close();
                         }
-                    } else
+                    }
+                    else
                     {
                         Lbl_Image.Visible = true;
-                        Lbl_Image.Text = "File too large!!!";
+                        Lbl_Image.Text = "Length should be less than 1 MB!!!";
                         Lbl_Image.ForeColor = Color.Red;
                     }
-                } else
+                }
+                else
                 {
                     Lbl_Image.Visible = true;
                     Lbl_Image.Text = "File Format not supported!!!";
                     Lbl_Image.ForeColor = Color.Red;
                 }
-            } else
+            }
+            else
             {
                 Lbl_Image.Visible = true;
-                Lbl_Image.Text = "File not present!!!";
+                Lbl_Image.Text = "Please upload an image!!!";
                 Lbl_Image.ForeColor = Color.Red;
             }
+
+
         }
 
         protected void ClearControls()
@@ -95,6 +106,23 @@ namespace ASP_Tutorial
             Txt_Id.Text = Txt_Name.Text = Txt_Age.Text = Txt_Salary.Text = "";
             Ddl_Gender.ClearSelection();
             Ddl_Designation.ClearSelection();
+        }
+
+        protected void Btn_Reset_Click(object sender, EventArgs e)
+        {
+            ClearControls();
+        }
+
+        protected void BindGridView()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "Select * from Employee";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+
         }
     }
 }

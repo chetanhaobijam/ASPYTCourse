@@ -33,6 +33,15 @@ namespace ASP_Tutorial
         protected global::System.Web.UI.WebControls.TextBox Txt_Id;
 
         /// <summary>
+        /// Id_RequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Id_RequiredValidator;
+
+        /// <summary>
         /// Txt_Name control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace ASP_Tutorial
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Txt_Name;
+
+        /// <summary>
+        /// Name_RequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Name_RequiredValidator;
 
         /// <summary>
         /// Txt_Age control.
@@ -51,6 +69,15 @@ namespace ASP_Tutorial
         protected global::System.Web.UI.WebControls.TextBox Txt_Age;
 
         /// <summary>
+        /// Age_RequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Age_RequiredValidator;
+
+        /// <summary>
         /// Ddl_Gender control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace ASP_Tutorial
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Ddl_Gender;
+
+        /// <summary>
+        /// Gender_RequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Gender_RequiredValidator;
 
         /// <summary>
         /// Ddl_Designation control.
@@ -69,6 +105,15 @@ namespace ASP_Tutorial
         protected global::System.Web.UI.WebControls.DropDownList Ddl_Designation;
 
         /// <summary>
+        /// Designation_RequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Designation_RequiredValidator;
+
+        /// <summary>
         /// Txt_Salary control.
         /// </summary>
         /// <remarks>
@@ -76,6 +121,15 @@ namespace ASP_Tutorial
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Txt_Salary;
+
+        /// <summary>
+        /// Salary_RequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Salary_RequiredValidator;
 
         /// <summary>
         /// FU_Image control.
