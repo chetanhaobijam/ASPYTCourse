@@ -92,6 +92,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style3">
+                        <asp:Image ID="Image_Preview" runat="server" Visible="False" Width="100" />
+                    </td>
+                </tr>
+                <tr>
                     <td class="auto-style2">Image</td>
                     <td class="auto-style3">
                         <asp:FileUpload ID="FU_Image" runat="server" Height="35px" Width="321px" />
@@ -107,16 +113,16 @@
                     <td colspan="2">
                         <asp:Button ID="Btn_Insert" runat="server" Height="39px" Text="Insert" Width="93px" OnClick="Btn_Insert_Click" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Btn_Update" runat="server" Height="39px" Text="Update" Width="93px" />
+                        <asp:Button ID="Btn_Update" runat="server" Height="39px" Text="Update" Width="93px" OnClick="Btn_Update_Click" />
                         &nbsp;&nbsp;
-                        <asp:Button ID="Btn_Delete" runat="server" Height="39px" Text="Delete" Width="93px" />
+                        <asp:Button ID="Btn_Delete" runat="server" Height="39px" Text="Delete" Width="93px" OnClick="Btn_Delete_Click" />
                         &nbsp;&nbsp;
                         <asp:Button ID="Btn_Reset" runat="server" Height="39px" Text="Reset" Width="93px" OnClick="Btn_Reset_Click" />
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
                                 <asp:CommandField ShowSelectButton="True"></asp:CommandField>
