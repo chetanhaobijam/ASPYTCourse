@@ -76,6 +76,7 @@
     <Content Include="Boostrap_with_ASP.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Cookies.aspx" />
     <Content Include="Crud_Image.aspx" />
     <Content Include="css\styles.css" />
     <Content Include="Dashboard.aspx" />
@@ -94,6 +95,7 @@
     <Content Include="PostBack.aspx" />
     <Content Include="QueryString1.aspx" />
     <Content Include="QueryString2.aspx" />
+    <Content Include="Redirect_Cookie.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Repeater.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -135,6 +137,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cookies.aspx.cs">
+      <DependentUpon>Cookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cookies.aspx.designer.cs">
+      <DependentUpon>Cookies.aspx</DependentUpon>
     </Compile>
     <Compile Include="Crud_Image.aspx.cs">
       <DependentUpon>Crud_Image.aspx</DependentUpon>
@@ -227,6 +236,13 @@
     </Compile>
     <Compile Include="QueryString2.aspx.designer.cs">
       <DependentUpon>QueryString2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Redirect_Cookie.aspx.cs">
+      <DependentUpon>Redirect_Cookie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redirect_Cookie.aspx.designer.cs">
+      <DependentUpon>Redirect_Cookie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
