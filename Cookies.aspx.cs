@@ -19,6 +19,8 @@ namespace ASP_Tutorial
             //Saves the cookie variable to the user constructor
             HttpCookie cookie = new HttpCookie("user");
             cookie["username"] = Txt_Username.Text;
+            //Set the expiry data of cookie to 2 days after today. We can also use AddMonths or AddYears instead.
+            cookie.Expires = DateTime.Now.AddDays(2);
             //Store cookie in the browser
             Response.Cookies.Add(cookie);
             Response.Redirect("Redirect_Cookie.aspx");
