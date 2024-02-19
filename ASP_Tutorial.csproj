@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AjaxMethod.aspx" />
     <Content Include="App_Data\LoginDatabase.mdf" />
     <Content Include="App_Data\LoginDatabase_log.ldf">
       <DependentUpon>LoginDatabase.mdf</DependentUpon>
@@ -85,20 +86,27 @@
     <Content Include="FilterGridView.aspx" />
     <Content Include="GridView.aspx" />
     <Content Include="images\Chetan_Photo.jpg" />
+    <Content Include="images\Infinity_1.gif" />
     <Content Include="images\Kishan_Photo.jpg" />
     <Content Include="images\nature.jpg" />
     <Content Include="images\Ramananda_Photo.jpg" />
     <Content Include="images\Rohel_Photo.jpg" />
     <Content Include="InsertImages.aspx" />
     <Content Include="ListBoxExercise.aspx" />
+    <Content Include="LoadData.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="pages\HtmlPage1.html" />
+    <Content Include="pages\TextFile1.txt" />
     <Content Include="PostBack.aspx" />
     <Content Include="QueryString1.aspx" />
     <Content Include="QueryString2.aspx" />
     <Content Include="Redirect_Cookie.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="RememberMe.aspx" />
+    <Content Include="RememberMe2.aspx" />
     <Content Include="Repeater.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="SendData1.aspx" />
     <Content Include="SendData2.aspx" />
     <Content Include="SessionStateForm3.aspx" />
@@ -110,6 +118,13 @@
     <Content Include="EasyEditDelete.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjaxMethod.aspx.cs">
+      <DependentUpon>AjaxMethod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxMethod.aspx.designer.cs">
+      <DependentUpon>AjaxMethod.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AutoIncrement.aspx.cs">
       <DependentUpon>AutoIncrement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +216,13 @@
     <Compile Include="ListBoxExercise.aspx.designer.cs">
       <DependentUpon>ListBoxExercise.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LoadData.aspx.cs">
+      <DependentUpon>LoadData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoadData.aspx.designer.cs">
+      <DependentUpon>LoadData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -250,6 +272,20 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RememberMe.aspx.cs">
+      <DependentUpon>RememberMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RememberMe.aspx.designer.cs">
+      <DependentUpon>RememberMe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RememberMe2.aspx.cs">
+      <DependentUpon>RememberMe2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RememberMe2.aspx.designer.cs">
+      <DependentUpon>RememberMe2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Repeater.aspx.cs">
       <DependentUpon>Repeater.aspx</DependentUpon>
