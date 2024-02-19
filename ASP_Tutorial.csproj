@@ -74,6 +74,7 @@
     </Content>
     <Content Include="AutoIncrement.aspx" />
     <Content Include="BindDDL.aspx" />
+    <Content Include="BindDDLwithDDL.aspx" />
     <Content Include="Boostrap_with_ASP.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.min.css" />
@@ -138,6 +139,13 @@
     </Compile>
     <Compile Include="BindDDL.aspx.designer.cs">
       <DependentUpon>BindDDL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BindDDLwithDDL.aspx.cs">
+      <DependentUpon>BindDDLwithDDL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BindDDLwithDDL.aspx.designer.cs">
+      <DependentUpon>BindDDLwithDDL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Boostrap_with_ASP.aspx.cs">
       <DependentUpon>Boostrap_with_ASP.aspx</DependentUpon>
